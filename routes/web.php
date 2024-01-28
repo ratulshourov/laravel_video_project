@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/calender-event', function () {
+    return view('calender-event');
+});
 
 Auth::routes();
 

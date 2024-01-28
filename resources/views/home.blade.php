@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('You are logged in!') }}<br/>
+                    <a href="/calender-event" class="btn sm btn-primary">ADD EVENT</a>
                 </div>
             </div>
         </div>
