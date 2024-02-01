@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\VideoChatController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +21,10 @@ Route::get('/', function () {
 Route::get('/calender-event', function () {
     return view('calender-event');
 });
-
+Route::get('/front', function () {
+    return view('layouts.frontend');
+});
+Route::post('/save-event', [EventController::class,'saveEvent']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
