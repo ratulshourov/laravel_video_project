@@ -25,6 +25,8 @@ Route::get('/front', function () {
     return view('layouts.frontend');
 });
 Route::post('/save-event', [EventController::class,'saveEvent']);
+Route::get('/', [EventController::class, 'index']);
+Route::post('/manage-event', [EventController::class, 'manageEvent']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
